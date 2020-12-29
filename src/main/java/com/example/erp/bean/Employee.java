@@ -12,6 +12,25 @@ public class Employee {
     @Column(nullable = false)
     private String first_name;
     private String last_name;
+    @Column(nullable = false, unique = true)
+    private String email;
+    private String title;
+    private String photograph_path;
+    private String department;
+//    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+//    @JoinColumn(name ="department_id")
+//    private Department department_id;
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+
+
 
     public String getFirst_name() {
         return first_name;
@@ -53,27 +72,14 @@ public class Employee {
         this.photograph_path = photograph_path;
     }
 
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    @Column(nullable = false, unique = true)
-    private String email;
-    private String title;
-    private String photograph_path;
-    private String department;
-
-    public Employee(String first_name, String last_name, String email, String title, String photograph_path, String department) {
+    public Employee(String first_name, String last_name, String email, String title, String photograph_path,String department) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
         this.title = title;
         this.photograph_path = photograph_path;
-        this.department = department;
+        this.department=department;
+       // this.department_id = department_id;
     }
 
     public Employee()

@@ -11,6 +11,7 @@ login_form.addEventListener('submit', async (e) => {
             },
             body: JSON.stringify({
                 email: document.getElementById('email').value,
+                // this email must match with column in bean file
             })
         });
         let result = await response;   //response from backend(true or false) is returned to front end

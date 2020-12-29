@@ -14,5 +14,8 @@
         <property name="show_sql">true</property>
         <mapping class="com.example.erp.bean.Employee"></mapping>
         <mapping class="com.example.erp.bean.Courses"></mapping>
+        <mapping class="com.example.erp.bean.Department"></mapping>
+        <mapping class="com.example.erp.bean.Prerequisite"></mapping>
+        <mapping class="com.example.erp.bean.Students"></mapping>
     </session-factory>
 </hibernate-configuration>
